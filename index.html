@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>スタジアムマップ（選択連動型）</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0; padding: 0;
+    overflow: hidden;
+    display: flex;
+    }
+    #sidebar {
+      width: 320px;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 20px;
+      box-sizing: border-box;
+      border-right: 1px solid #ccc;
+      background: #f8f8f8;
+    }
+    #map {
+    flex-grow: 1;
+    height: 100vh;
+    min-width: 0;
+    min-height: 0;
+    background-color: #eee;
+    border: 3px solid red; /* 追加 */
+    position: relative;    /* 追加 */
+    z-index: 10;           /* 追加 */
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    input[type="checkbox"] {
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  </style>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/maplibre-gl@2.4.0/dist/maplibre-gl.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <div id="sidebar">
+    <h1>行ったスタジアムを選択</h1>
+    <div id="stadiumList"></div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+  <script src="https://unpkg.com/papaparse@5.3.1/papaparse.min.js"></script>
+
+  <script src="map.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
