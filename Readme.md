@@ -28,14 +28,13 @@
 - インターネット接続（MapLibre・PapaParse CDN を利用）
 
 ## セットアップ手順
-
 1. このリポジトリをダウンロードまたはクローンします。
 2. `stadiums.csv` に必要なデータを記入します。
    - 必須カラム例: `name,lat,lng`
 3. ローカルサーバーを起動します。  
    例（Node.js を使用する場合）:
    ```bash
-   npx http-server .
+   npx http-server 
    ```
 
 ## デモ
