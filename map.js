@@ -6,7 +6,7 @@ function initializeMap() {
     container: 'map',
     style: 'https://demotiles.maplibre.org/style.json',
     center: [139.6917, 35.6895],
-    zoom: 4
+    zoom: 5
   });
   console.log('map initialized:', map);
 }
